@@ -1,10 +1,10 @@
 # fast-cli-skill
 
-一个用于现代快速命令行工具的 OpenCode 技能，替代传统的 GNU/Unix 工具。
+将基于 Rust 的快速命令行工具集成到 AI Agent 中，作为传统 GNU/Unix 工具的高性能替代方案。
 
 ## 概述
 
-本技能提供了一套现代、快速、用户友好的命令行工具指南，用于替代传统的 GNU/Unix 工具。这些工具通常用 Rust 编写，性能更好，输出更美观。
+本技能将现代 Rust 编写的高性能命令行工具集成到 AI Agent 工作流中，替代传统的 GNU/Unix 工具。这些工具具有更快的执行速度、更友好的输出格式和更智能的默认行为，能够显著提升 AI Agent 在文件搜索、数据处理和系统管理任务中的效率。
 
 ## 支持的工具
 
@@ -29,16 +29,20 @@
 
 ## 安装
 
-### macOS (Homebrew)
+### 自动安装（推荐）
 
 ```bash
-# 安装所有工具
-brew install ripgrep fd bat eza git-delta sd hyperfine dust duf procs bottom choose-rust xsv jq yq broot
+# 自动检测并安装缺失的工具（支持 macOS 和 Linux）
+bash scripts/install-tools.sh
 ```
 
-### Cargo (Rust 工具)
+### 手动安装
 
 ```bash
+# macOS (Homebrew)
+brew install ripgrep fd bat eza git-delta sd hyperfine dust duf procs bottom choose-rust xsv jq yq broot
+
+# Linux (Cargo)
 cargo install ripgrep fd-find bat git-delta sd hyperfine dust duf procs bottom broot
 ```
 
@@ -72,26 +76,6 @@ jq '.key' file.json
 yq '.key' file.yaml
 ```
 
-### Shell 别名配置
-
-将以下内容添加到你的 `~/.bashrc` 或 `~/.zshrc`：
-
-```bash
-alias cat='bat'
-alias ls='eza'
-alias ll='eza -la'
-alias tree='eza --tree'
-alias grep='rg'
-alias find='fd'
-alias diff='delta'
-alias du='dust'
-alias df='duf'
-alias ps='procs'
-alias top='btm'
-alias jj='jq .'
-alias yy='yq .'
-```
-
 ## 文件结构
 
 ```
@@ -103,7 +87,8 @@ fast-cli-skill/
 │   ├── cheatsheet.md           # 速查表
 │   └── shell-config.md         # Shell 配置模板
 └── scripts/
-    └── check-tools.sh          # 工具安装检查脚本
+    ├── install-tools.sh        # 自动安装脚本
+    └── check-tools.sh          # 工具检查脚本
 ```
 
 ## 使用场景

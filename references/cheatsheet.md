@@ -173,24 +173,6 @@ fd -e json | xargs jq '.name'
 fd -e yaml -x yq -i '.spec.replicas = 3' {}
 ```
 
-## Shell 别名
-
-```bash
-alias cat='bat'
-alias ls='eza'
-alias ll='eza -la'
-alias tree='eza --tree'
-alias grep='rg'
-alias find='fd'
-alias diff='delta'
-alias du='dust'
-alias df='duf'
-alias ps='procs'
-alias top='btm'
-alias jj='jq .'
-alias yy='yq .'
-```
-
 ## 配置文件
 
 - ripgrep: `~/.ripgreprc` (设置 `RIPGREP_CONFIG_PATH`)

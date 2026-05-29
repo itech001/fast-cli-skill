@@ -12,11 +12,14 @@ description: Use this skill when working with modern fast command-line tools tha
 ## 安装
 
 ```bash
-# macOS (Homebrew)
+# 自动安装所有工具（支持 macOS 和 Linux）
+bash scripts/install-tools.sh
+
+# 或手动安装（macOS）
 brew install ripgrep fd bat eza git-delta sd hyperfine dust duf procs bottom broot choose-rust xsv jq yq
 
-# Cargo (Rust 工具)
-cargo install ripgrep fd-find bat git-delta sd hyperfine dust duf procs bottom broot
+# 检查安装状态
+bash scripts/check-tools.sh
 ```
 
 ## 工具映射
@@ -467,35 +470,6 @@ cat multi.yaml | yq 'select(.kind == "Deployment")'
 
 # 创建 YAML
 echo 'name: test' | yq '.'
-```
-
-## Shell 别名
-
-添加到 `~/.bashrc` 或 `~/.zshrc`：
-
-```bash
-# 核心替换
-alias cat='bat'
-alias ls='eza'
-alias ll='eza -la'
-alias tree='eza --tree'
-alias grep='rg'
-alias find='fd'
-alias diff='delta'
-alias du='dust'
-alias df='duf'
-alias ps='procs'
-alias top='btm'
-
-# Git 别名
-alias gd='git diff | delta'
-alias gl='git log | delta'
-
-# 有用组合
-alias fdr='fd -t f | rg'  # 查找文件然后搜索
-alias rgf='rg -l'         # 仅显示匹配的文件名
-alias jj='jq .'           # 格式化 JSON
-alias yy='yq .'           # 格式化 YAML
 ```
 
 ## 集成示例

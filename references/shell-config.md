@@ -1,34 +1,14 @@
-# 快速 CLI 工具 - Shell 配置
-# 将以下内容添加到你的 ~/.bashrc、~/.zshrc 或 ~/.config/fish/config.fish
+# 快速 CLI 工具 - 环境变量和配置
 
-# ===== Bash/Zsh =====
+# ===== 环境变量 =====
 
-# 核心工具别名
-alias cat='bat'
-alias ls='eza'
-alias ll='eza -la'
-alias la='eza -a'
-alias tree='eza --tree'
-alias grep='rg'
-alias find='fd'
-alias diff='delta'
-alias du='dust'
-alias df='duf'
-alias ps='procs'
-alias top='btm'
-
-# JSON/YAML 工具别名
-alias jj='jq .'
-alias yy='yq .'
-
-# Git 别名配合 delta
-alias gd='git diff | delta'
-alias gl='git log | delta'
-alias gs='git status'
-
-# 环境变量
+# ripgrep 配置文件路径
 export RIPGREP_CONFIG_PATH="$HOME/.ripgreprc"
+
+# bat 主题
 export BAT_THEME="Dracula"  # 或 "TwoDark", "Monokai Extended" 等
+
+# eza 颜色
 export EZA_COLORS="da=37:di=34"
 
 # 使用 bat 作为 man 分页器
@@ -40,38 +20,14 @@ export GIT_PAGER="delta"
 # jq 颜色配置
 export JQ_COLORS="2;30:0;39:0;39:0;39:0;32:1;39:1;39"
 
-# ===== Fish Shell =====
+# ===== Fish Shell 环境变量 =====
 
-# 核心工具别名 (Fish)
-alias cat 'bat'
-alias ls 'eza'
-alias ll 'eza -la'
-alias la 'eza -a'
-alias tree 'eza --tree'
-alias grep 'rg'
-alias find 'fd'
-alias diff 'delta'
-alias du 'dust'
-alias df 'duf'
-alias ps 'procs'
-alias top 'btm'
-
-# JSON/YAML 工具别名 (Fish)
-alias jj 'jq .'
-alias yy 'yq .'
-
-# Git 别名配合 delta (Fish)
-alias gd 'git diff | delta'
-alias gl 'git log | delta'
-alias gs 'git status'
-
-# 环境变量 (Fish)
-set -gx RIPGREP_CONFIG_PATH "$HOME/.ripgreprc"
-set -gx BAT_THEME "Dracula"
-set -gx EZA_COLORS "da=37:di=34"
-set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
-set -gx GIT_PAGER "delta"
-set -gx JQ_COLORS "2;30:0;39:0;39:0;39:0;32:1;39:1;39"
+# set -gx RIPGREP_CONFIG_PATH "$HOME/.ripgreprc"
+# set -gx BAT_THEME "Dracula"
+# set -gx EZA_COLORS "da=37:di=34"
+# set -gx MANPAGER "sh -c 'col -bx | bat -l man -p'"
+# set -gx GIT_PAGER "delta"
+# set -gx JQ_COLORS "2;30:0;39:0;39:0;39:0;32:1;39:1;39"
 
 # ===== ripgrep 配置 (~/.ripgreprc) =====
 # 创建此文件：
