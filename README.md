@@ -29,7 +29,17 @@
 
 ## 安装
 
-### 自动安装（推荐）
+### 通过 npx 安装（推荐）
+
+```bash
+npx skills add itech001/fast-cli-skill
+```
+
+### 通过 SkillHub 安装
+
+访问 [SkillHub - fast-cli-skill](https://skillhub.cloud.tencent.com/skills/fast-cli-skill) 安装。
+
+### 自动安装工具依赖
 
 ```bash
 # 自动检测并安装缺失的工具（支持 macOS 和 Linux）
