@@ -553,3 +553,7 @@ fd -e yaml -x yq -i '.spec.replicas = 3' {}
 - 脚本必须移植到没有这些工具的系统
 - 现代替代工具不支持的特定 GNU 工具标志
 - 用户明确要求使用传统工具
+
+## 来源
+
+- [The AI Era](https://www.theaiera.cn/)

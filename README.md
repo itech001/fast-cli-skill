@@ -166,6 +166,10 @@ git log -p | delta
 - 现代替代工具不支持的特定 GNU 工具标志
 - 用户明确要求使用传统工具
 
+## 来源
+
+- [The AI Era](https://www.theaiera.cn/)
+
 ## 贡献
 
 欢迎提交 Issue 和 Pull Request！
